@@ -6,7 +6,7 @@ sgolayfilt
 
 --------
 
-[```sgolayfilt```](https://github.com/horchler/sgolayfilt/blob/master/sgolayfilt.m) is a replacement for Matlab's [```sgolay```](http://www.mathworks.com/help/signal/ref/sgolay.html) function that just calculates and returns the differentiation filters. The result is 2?4 times faster.
+[```sgolayfilt```](https://github.com/horchler/sgolayfilt/blob/master/sgolayfilt.m) is a replacement for Matlab's [```sgolay```](http://www.mathworks.com/help/signal/ref/sgolay.html) function that just calculates and returns the differentiation filters. The result is 2&ndash;4 times faster.
 
 ```sgolayfilt(K,F)``` returns the matrix of differentiation filters. The polynomial order, ```K```, must be a integer less than window size, ```F```, which must be an odd integer. If the polynomial order, ```K```, equals ```F-1```, no smoothing will occur. Each of the ```K+1``` columns of the output is a differentiation filter for derivatives of order ```P-1``` where ```P``` is the column index.
 &nbsp;  
@@ -18,7 +18,7 @@ Created: 12-16-11, Revision: 1.0, 4-7-16
 
 This version tested with Matlab 8.6.0.267246 (R2015b)  
 Mac OS X 10.11.4 (Build: 14D136), Java 1.7.0_75-b13  
-Compatibility maintained back through Matlab 7.4 (R2015a)  
+Compatibility maintained back through Matlab 7.4 (R2012a)  
 &nbsp;  
 
 --------
