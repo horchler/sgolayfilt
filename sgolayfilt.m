@@ -11,9 +11,9 @@ function G = sgolayfilt(k,f)
 %       K = 4; F = 55;
 %       G = sgolayfilt(K,F);
 %       dt = 5e-2; t = 0:dt:4*pi;
-%       y = sin(t)+1e-2*randn(size(t));     % Noisy sinusoid
-%       yG0 = conv2(y,G(:,1).','same');     % 0-th derivative, smoothed
-%       yG1 = conv2(y,G(:,2).','same')/dt;  % 1-st derivative, smoothed
+%       y = sin(t)+1e-2*randn(size(t));    % Noisy sinusoid
+%       yG0 = conv(y,G(:,1).','same');     % 0-th derivative, smoothed
+%       yG1 = conv(y,G(:,2).','same')/dt;  % 1-st derivative, smoothed
 %       figure; plot(t,y,'k',t,yG0,'b',t,yG1,'r');
 %       legend('Noisy','Savitzky-Golay smoothed',...
 %              'Savitzky-Golay smoothed first derivative');
