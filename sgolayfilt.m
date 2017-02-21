@@ -20,7 +20,7 @@ function G = sgolayfilt(k,f)
 %   
 %   See also SGOLAY
 
-%   Andrew D. Horchler, adh9 @ case . edu, Created 12-16-11
+%   Andrew D. Horchler, horchler @ gmail . com, Created 12-16-11
 %   Revision: 1.0, 4-7-16
 
 
