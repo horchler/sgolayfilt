@@ -1,8 +1,8 @@
 sgolayfilt
 ========
-#####Savitzky-Golay differentiation filters &ndash; Matlab.#####
-######Version 1.0, 4-7-16######
-#####Download Repository: [ZIP Archive](https://github.com/horchler/sgolayfilt/archive/master.zip)#####
+##### Savitzky-Golay differentiation filters &ndash; Matlab.
+###### Version 1.0, 4-7-16
+##### Download Repository: [ZIP Archive](https://github.com/horchler/sgolayfilt/archive/master.zip)
 
 --------
 
