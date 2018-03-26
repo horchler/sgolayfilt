@@ -1,20 +1,23 @@
 sgolayfilt
 ========
 ##### Savitzky-Golay differentiation filters &ndash; Matlab.
-###### Version 1.0, 4-7-16
-##### Download Repository: [ZIP Archive](https://github.com/horchler/sgolayfilt/archive/master.zip)
+###### Version 1.1 based on original Version 1.0, 4-7-16     
+##### Download Repository: [ZIP Archive](https://github.com/AlexHenderson/sgolayfilt/archive/master.zip)
 
 --------
 
-[```sgolayfilt```](https://github.com/horchler/sgolayfilt/blob/master/sgolayfilt.m) is a replacement for Matlab's [```sgolay```](http://www.mathworks.com/help/signal/ref/sgolay.html) function that just calculates and returns the differentiation filters. The result is 2&ndash;4 times faster.
+[```sgolayfilt```](https://github.com/AlexHenderson/sgolayfilt/blob/master/sgolayfilt.m) is a replacement for Matlab's [```sgolay```](http://www.mathworks.com/help/signal/ref/sgolay.html) function that just calculates and returns the differentiation filters. The result is 2&ndash;4 times faster.
 
 ```sgolayfilt(K,F)``` returns the matrix of differentiation filters. The polynomial order, ```K```, must be a integer less than window size, ```F```, which must be an odd integer. If the polynomial order, ```K```, equals ```F-1```, no smoothing will occur. Each of the ```K+1``` columns of the output is a differentiation filter for derivatives of order ```P-1``` where ```P``` is the column index.
 &nbsp;  
+
+This fork of the original code from Andrew Horchler replaces the error messages with exceptions. There is no change to the functional aspect of the code. 
 
 --------
 
 Andrew D. Horchler, *horchler @ gmail . com*, [biorobots.case.edu](http://biorobots.case.edu/)  
 Created: 12-16-11, Revision: 1.0, 4-7-16  
+Modified by Alex Henderson, [alex.henderson@manchester.ac.uk](alex.henderson@manchester.ac.uk "alex.henderson@manchester.ac.uk"), 26 March 2018
 
 This version tested with Matlab 9.0.0.341360 (R2016a)  
 Mac OS X 10.11.4 (Build: 15E65), Java 1.7.0_75-b13  

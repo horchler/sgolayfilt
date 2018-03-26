@@ -23,28 +23,40 @@ function G = sgolayfilt(k,f)
 %   Andrew D. Horchler, horchler @ gmail . com, Created 12-16-11
 %   Revision: 1.0, 4-7-16
 
+%   Errors converted to exceptions. No change to the functional aspect of
+%   the code.
+%   Alex Henderson, alex.henderson@manchester.ac.uk, 26 March 2018
+%   https://github.com/AlexHenderson/sgolayfilt forked from original
+%   https://github.com/horchler/sgolayfilt
+
 
 if nargin < 2
-    error('sgolayfilt:TooFewInputs','Not enough input arguments.');
+    err = MException('sgolayfilt:TooFewInputs', ...
+        'Not enough input arguments.');
+    throw(err);
 end
 
 if ~isscalar(k) || ~isfinite(k) || ~isreal(k)
-    error('sgolayfilt:NonFiniteRealK',...
-          'The polynomial order, K, must be a finite real integer.');
+    err = MException('sgolayfilt:NonFiniteRealK', ...
+        'The polynomial order, K, must be a finite real integer.');
+    throw(err);
 end
 if ~isscalar(f) || ~isfinite(f) || ~isreal(f)
-    error('sgolayfilt:NonFiniteRealF',...
-          'The window size, F, must be a finite real integer.');
+    err = MException('sgolayfilt:NonFiniteRealF', ...
+        'The window size, F, must be a finite real integer.');
+    throw(err);
 end
 
 if f < 1 || f ~= floor(f) || mod(f,2) ~= 1
-    error('sgolayfilt:InvaildF',...
-          'The window size, F, must be an odd integer greater than 0.');
+    err = MException('sgolayfilt:InvaildF', ...
+        'The window size, F, must be an odd integer greater than 0.');
+    throw(err);
 end
 if k < 0 || k >= f || k ~= floor(k)
-    error('sgolayfilt:InvaildK',...
+    err = MException('sgolayfilt:InvaildK', ...
          ['The polynomial order, K, must be an odd integer greater than the '...
           'window size, F.']);
+    throw(err);
 end
 
 s = vander(0.5*(1-f):0.5*(f-1));
